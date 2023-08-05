@@ -1,0 +1,17 @@
+<div class="container">
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+    <div class="image-container">
+      <img [src]="imagePreview" alt="Image Preview" *ngIf="imagePreview">
+    </div>
+    <button (click)="uploadImage()">Send</button>
+    <div id="backendResult" style="font-size: 40px; color: #0088ff;">
+    {{backendResult}}
+
+    <!-- <div class="spinner" *ngIf="showSpinner"> -->
+
+        
+
+    </div> <!-- Update this line -->
+  
+  
